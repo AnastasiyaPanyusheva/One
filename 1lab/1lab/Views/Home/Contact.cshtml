@@ -1,0 +1,10 @@
+﻿<h3>@ViewBag.Message</h3>
+
+<table>
+    @for (int i = 0; i < ViewBag.myText.Length; i++)
+    {
+        <tr>
+            <td>@Html.ViewBag.myText[i]</td>
+        </tr>
+    }
+</table>
