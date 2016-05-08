@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Блокнот";
+}
+<div id="create">
+    <input class="form-control" type="text" placeholder="Имя вкладки" data-bind="value: notename" />
+    <button class="btn btn-default" data-bind="click: create">Создать</button>
+    <hr />
+</div>
+<div class="divList" data-bind="foreach: notebook">
+    <button class="btn btn-primary listnotepad" data-bind="text:Name, click: $parent.selected"></button>
+</div>
+<div id="edit">
+    <img data-bind="attr: { src: image }" />
+    <h4>Содержимое</h4>     
+    <div class="noteContent">
+        <textarea class="form-control" rows="10" id="noteContent" data-bind="value: text"> </textarea>
+        <button class="btn btn-default" id="save" data-bind="click:save">Сохранить</button>
+    </div>
+</div> 
+
+<script type="text/javascript">
+    var notebookName = "";
+    notebookName = '@ViewBag.notebookName';
+</script>

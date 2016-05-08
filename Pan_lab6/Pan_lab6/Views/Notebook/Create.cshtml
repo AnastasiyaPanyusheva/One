@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Создание блокнота";
+}
+
+<div id="create">
+    <input class="form-control" type="text" placeholder="Имя вкладки" data-bind="value: notename" />
+    <button class="btn btn-default" data-bind="click: create">Создать</button>
+    <hr />
+</div>
+
+<script type="text/javascript">
+    var notebookName = "";
+    notebookName = '@ViewBag.notebookName';
+</script>
